@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Faça seu Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body class="login-page">
+    <main class="split">
+      <section class="left">
+        <h1>Faça seu Login</h1>
+        <form class="form" action="#" method="post">
+          <label for="email">E-mail</label>
+          <div class="field">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM4 7l8 5 8-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <input id="email" name="email" type="email" placeholder="Seu E-mail" required />
+          </div>
+
+          <label for="senha">Senha</label>
+          <div class="field">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 10V8a5 5 0 0110 0v2M5 10h14v10H5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <input id="senha" name="senha" type="password" placeholder="Sua Senha" required />
+          </div>
+
+          <div class="row">
+            <label class="checkbox">
+              <input type="checkbox" checked />
+              <span>Lembrar de mim</span>
+            </label>
+            <a class="muted" href="#">Esqueci minha senha</a>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Entrar</button>
+
+          <p class="signup">Não tem uma conta ainda? <a href="#">Crie agora</a></p>
+        </form>
+      </section>
+
+      <aside class="right">
+        <div class="book-mark">
+          <svg viewBox="0 0 64 64">
+            <path d="M8 16h20c4 0 8 3 8 7v25c-3-2-6-3-8-3H8V16zm48 0H36c-4 0-8 3-8 7v25c3-2 6-3 8-3h20V16z" fill="none" stroke="#fff" stroke-width="3.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
