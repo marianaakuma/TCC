@@ -1,8 +1,8 @@
 const modal = document.querySelector('.modal-container')
 const tbody = document.querySelector('tbody')
-const sNome = document.querySelector('#m-nome')
-const sFuncao = document.querySelector('#m-funcao')
-const sSalario = document.querySelector('#m-salario')
+const sTitulo = document.querySelector('#m-titulo')
+const sData = document.querySelector('#m-data')
+const sHora = document.querySelector('#m-hora')
 const btnSalvar = document.querySelector('#btnSalvar')
 
 let itens
@@ -18,20 +18,18 @@ function openModal(edit = false, index = 0) {
   }
 
   if (edit) {
-    sNome.value = itens[index].nome
-    sFuncao.value = itens[index].funcao
-    sSalario.value = itens[index].salario
+    sTitulo.value = itens[index].titulo
+    sData.value = itens[index].data
+    sHora.value = itens[index].hora
     id = index
   } else {
-    sNome.value = ''
-    sFuncao.value = ''
-    sSalario.value = ''
+    sTitulo.value = ''
+    sData.value = ''
+    sHora.value = ''
   }
-  
 }
 
 function editItem(index) {
-
   openModal(true, index)
 }
 
@@ -45,11 +43,11 @@ function insertItem(item, index) {
   let tr = document.createElement('tr')
 
   tr.innerHTML = `
-    <td>${item.nome}</td>
-    <td>${item.funcao}</td>
-    <td>R$ ${item.salario}</td>
+    <td>${item.titulo}</td>
+    <td>${item.data}</td>
+    <td>${item.hora}</td>
     <td class="acao">
-      <button onclick="editItem(${index})"><i class='bx bx-edit' ></i></button>
+      <button onclick="editItem(${index})"><i class='bx bx-edit'></i></button>
     </td>
     <td class="acao">
       <button onclick="deleteItem(${index})"><i class='bx bx-trash'></i></button>
@@ -59,23 +57,26 @@ function insertItem(item, index) {
 }
 
 btnSalvar.onclick = e => {
-  
-  if (sNome.value == '' || sFuncao.value == '' || sSalario.value == '') {
+
+  if (sTitulo.value == '' || sData.value == '' || sHora.value == '') {
     return
   }
 
-  e.preventDefault();
+  e.preventDefault()
 
   if (id !== undefined) {
-    itens[id].nome = sNome.value
-    itens[id].funcao = sFuncao.value
-    itens[id].salario = sSalario.value
+    itens[id].titulo = sTitulo.value
+    itens[id].data = sData.value
+    itens[id].hora = sHora.value
   } else {
-    itens.push({'nome': sNome.value, 'funcao': sFuncao.value, 'salario': sSalario.value})
+    itens.push({
+      titulo: sTitulo.value,
+      data: sData.value,
+      hora: sHora.value
+    })
   }
 
   setItensBD()
-
   modal.classList.remove('active')
   loadItens()
   id = undefined
@@ -84,10 +85,7 @@ btnSalvar.onclick = e => {
 function loadItens() {
   itens = getItensBD()
   tbody.innerHTML = ''
-  itens.forEach((item, index) => {
-    insertItem(item, index)
-  })
-
+  itens.forEach((item, index) => insertItem(item, index))
 }
 
 const getItensBD = () => JSON.parse(localStorage.getItem('dbfunc')) ?? []
