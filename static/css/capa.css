@@ -12,3 +12,26 @@
 .rodape-coluna{
     color: #FFFCF7;
 }
+
+.destaques-acervo{
+     background-color: #FFFFFF;
+}
+
+.cria-conta{
+    background-color:#003366;
+    color:#FFFFFF;
+}
+
+.mensagem{
+    text-align: center;
+}
+
+button {
+    background-color: #003366; /* azul escuro */
+    color: white;              /* texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
