@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <title>pagina inicial</title>
+    <meta charset="UTF-8">
+    <title>Library Connect</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/capa.css') }}">
 </head>
 <body>
-
-    <div class="topopagina">
+    <header class="topo">
         <div class="logo">
-            <img src="https://i.ibb.co/G4sQWdkg/image.png" alt="Logo do site">
+            <img src="https://i.ibb.co/G4sQWdkg/image.png">
         </div>
 
         <nav class="menu">
@@ -22,41 +21,54 @@
             <button>Cadastro</button>
             <button>Login</button>
         </div>
-    </div>
-
-    <div class="mensagem">
-        <h1>Bem-Vindo à sua Biblioteca Virtual</h1>
-        <p>
-            O conhecimento do mundo ao seu alcance.<br>
-            A qualquer hora, em qualquer lugar.
-        </p>
-
-        <div class="botoes1">
-            <button>Explorar</button>
+    </header>
+    <section class="banner">
+        <div class="banner-texto">
+            <h1>Bem-vindo à sua<br> Biblioteca Virtual</h1>
+            <p>O conhecimento do mundo ao seu alcance.<br>A qualquer hora, em qualquer lugar.</p>
+            <button class="btn-explorar">Explorar</button>
         </div>
-    </div>
+    </section>
 
-    <div class="destaques-acervo">
-        <img src="https://i.ibb.co/m5cFXCRj/image.png" alt="image">
-        <img src="https://i.ibb.co/CKsKZYbx/image.png" alt="image">
-        <img src="https://i.ibb.co/cSHtBHPx/image.png" alt="image">
-        <img src="https://i.ibb.co/5W8WCS46/image.png" alt="image">
-    </div>
+    <section class="destaques">
+        <h2 class="destaque-titulo">Destaques do acervo</h2>
 
-    <div class="cria-conta">
-        <h4>Baixe livros e leia de qualquer lugar</h4>
-        <img src="https://i.ibb.co/QsmW6sm/image.png" alt="image">
-        <button>Criar</button>
-    </div>
+        <div class="livros">
+            <img src="https://i.ibb.co/m5cFXCRj/image.png">
+            <img src="https://i.ibb.co/CKsKZYbx/image.png">
+            <img src="https://i.ibb.co/cSHtBHPx/image.png">
+            <img src="https://i.ibb.co/5W8WCS46/image.png">
+        </div>
+    </section>
+    <section class="criar-conta">
+        <div class="caixa-conta">
 
+            <div class="caixa-img">
+                <img src="https://i.ibb.co/QsmW6sm/image.png">
+            </div>
+
+            <div class="caixa-texto">
+                <h2>Crie uma conta</h2>
+                <p>Baixe livros e leia de qualquer lugar</p>
+                <button class="btn-criar">Criar</button>
+            </div>
+
+        </div>
+    </section>
     <footer class="rodape">
         <div class="rodape-conteudo">
-            <div class="rodape-coluna">
-                <h3>Library Connect</h3>
-                <p>Siga-nos</p>
+
+            <div class="coluna-esquerda">
+                <h3>📘 Library Connect</h3>
+                <p class="siga-title">Siga-nos</p>
+
+                <div class="social-icons">
+                    <img src="https://i.ibb.co/YkZ9N0s/facebook.png">
+                    <img src="https://i.ibb.co/18JsNpH/instagram.png">
+                </div>
             </div>
-            
-            <div class="rodape-coluna">
+
+            <div class="coluna-direita">
                 <h4>Navegação</h4>
                 <ul>
                     <li><a href="#">Início</a></li>
@@ -65,7 +77,9 @@
                     <li><a href="#">Política de Privacidade</a></li>
                 </ul>
             </div>
+
         </div>
+
         <div class="rodape-direitos">
             © LibraryConnect — todos os direitos reservados
         </div>
