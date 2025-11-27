@@ -1,3 +1,15 @@
 .topopagina{
     background-color: #003366;
+    height: 3rem;
+    padding: 0 5%;
+    position: relative;
+}
+
+.rodape{
+    background-color: #005A9C;
+}
+
+.rodape-coluna{
+    color: #FFFCF7;
+
 }
