@@ -1,37 +1,93 @@
-.topopagina{
+/* ---------- TOPO DA PÁGINA ---------- */
+.topopagina {
     background-color: #003366;
     height: 3rem;
     padding: 0 5%;
     position: relative;
+    display: flex;
+    align-items: center; /* alinha logo e menu verticalmente */
 }
 
-.rodape{
+/* LOGO */
+.logo img {
+    height: 40px;
+}
+
+/* MENU DE LINKS */
+.menu {
+    margin-left: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+/* ---------- BOTÕES DO TOPO (CADASTRO / LOGIN) ---------- */
+.botoes {
+    position: absolute;
+    top: 50%;          /* centraliza verticalmente na barra */
+    right: 5%;         /* encosta no lado direito */
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.botoes button {
     background-color: #005A9C;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
 }
 
-.rodape-coluna{
-    color: #FFFCF7;
-}
-
-.destaques-acervo{
-     background-color: #FFFFFF;
-}
-
-.cria-conta{
-    background-color:#003366;
-    color:#FFFFFF;
-}
-
-.mensagem{
-    text-align: center;
-}
-
+/* ---------- ESTILO GLOBAL DE BOTÕES ---------- */
 button {
-    background-color: #003366; /* azul escuro */
-    color: white;              /* texto branco */
+    background-color: #003366;
+    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+}
+
+/* ---------- SEÇÕES DO SITE ---------- */
+
+.rodape {
+    background-color: #005A9C;
+}
+
+.rodape-coluna {
+    color: #FFFCF7;
+}
+
+.destaques-acervo {
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.destaques-acervo img {
+    width: 22%;
+    margin: 1%;
+}
+
+.cria-conta {
+    background-color: #003366;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.mensagem {
+    text-align: center;
+}
+
+/* Botão "Explorar" da mensagem */
+.botoes1 {
+    margin-top: 20px;
 }
