@@ -9,8 +9,8 @@
 <div class="container">
     <div class="form-area">
         <h1>Crie sua Conta</h1>
+        <form class="cadastro-form" action="{{ url_for('usuarios.create') }}" method="POST"></form>
         <form>
-
             <label for="nome">Nome completo</label>
             <input type="text" id="nome" placeholder="Seu nome" required>
 
@@ -23,6 +23,12 @@
             <label for="confirmar">Confirmar senha</label>
             <input type="password" id="confirmar" placeholder="Confirme sua senha" required>
 
+            <label for="confirmar">Sexo</label>
+            <input type="sexo" id="sexo" placeholder="sexo" required>
+            
+            <label for="confirmar">Data de Nascimento</label>
+            <input type="data de nascimento" id="data de nascimento" placeholder="data de nascimento" required>
+
             <label for="adm">É administrador?</label>
             <select id="adm" required>
                 <option value="" disabled selected>Selecione...</option>
@@ -33,7 +39,7 @@
             <button type="submit">Criar conta</button>
 
             <p class="link-login">
-                Já tem uma conta? <a href="login.html">Entre aqui</a>
+                Já tem uma conta? <a href="{{ url_for('usuarios.autenticar') }}">Faça login</a>
             </p>
         </form>
     </div>
