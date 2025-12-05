@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Login - Library Connect</title>
+    <title>Biblioteca Virtual - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 <body>
-
-<div class="container">
-    <div class="esquerda">
-        <h1>Faça seu Login</h1>
-        <form action="#" method="POST">
-            <label for="email">E-mail</label>
-            <div class="input-box">
-                <span class="ícone">📧</span>
-                <input type="email" id="email" placeholder="Seu E-mail" required>
+        <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+            <div class="logo-container">
             </div>
-            <label for="senha">Senha</label>
-            <div class="input-box">
-                <span class="ícone">🔒</span>
-                <input type="password" id="senha" placeholder="Sua Senha" required>
             </div>
-            <div class="opções">
-                <label><input type="checkbox"> Lembrar de mim</label>
-                <a href="#">Esqueci minha senha</a>
-            </div>
-            <button class="btn">Entrar</button>
-            <p class="registrar">
-                Não tem uma conta ainda? <a href="#">Crie agora</a>
-            </p>
-        </form>
-    </div>
-    <div class="direita">
-        <img src="https://i.ibb.co/G4sQWdkg/image.png" alt="Ícone da biblioteca">
-    </div>
-
-</div>
-
+        </div>
+    </header>
+    <main class="container">
+        <div class="login-container">
+            <h2 style="text-align: center; color: #003366; margin-bottom: 30px; font-family: Poltawski Nowy; font-size: 30px;">Faça seu Login </h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError">Por favor, insira um e-mail válido.</div>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                    <div class="error-message" id="passwordError">A senha deve ter pelo menos 6 caracteres.</div>
+                </div>
+                <button type="submit" class="login-btn">Entrar</button>
+                <div class="forgot-password">
+                    <a href="recuperar-senha">Esqueceu sua senha?</a>
+                </div>
+                <div class="register-link">
+                    Não tem uma conta? <a href="{{ url_for('usuarios.create') }}">Cadastre-se</a>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

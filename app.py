@@ -12,10 +12,5 @@ def capa():
 def usuario_create():
     return render_template('usuario_create.html')
 
-@app.route('/cadastro')
-def cadastro():
-    return render_template('cadastro.html')
-
-
 if __name__ == '__main__':
     app.run(debug=True)
