@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Biblioteca Virtual - Criar livro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo-container">
+                    <!-- Você pode adicionar o logo aqui -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="cadastro-container">
+            <form class="cadastro-form" action="{{ url_for('livros_create.create') }}" method="POST">
+                <h2 style="text-align: center; color: #191970; margin-bottom: 30px;">Criar livro</h2>
+
+                <div class="form-group">
+                    <label for="titulo">titulo</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ano">ano</label>
+                    <select name="ano">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="curso">curso</label>
+                    <select name="curso">
+                        <option value="comercio">Comercio</option>
+                        <option value="eletronica">Eletronica</option>
+                        <option value="informatica">Informatica</option>
+                      </select><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="materia">materia</label>
+                    <input type="text" id="materia" name="materia" required>
+                </div> 
+                <div class="form-group">
+                    <label for="link">link</label>
+                    <input type="text" id="link" name="link" required>
+                </div>
+                <button type="submit" class="cadastro-btn">Criar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
